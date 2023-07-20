@@ -103,7 +103,7 @@ main section:nth-of-type(1) {
   margin: 2em 0em 2em 0em;
 }
 
-main section:nth-of-type(1) p {
+main section:nth-of-type(1) div p {
   text-align: center;
 } /* This has to be here for Firefox, if it wasn't it's left justified yet Chrome has no problem centering it from attributes above. WHY. */
 
