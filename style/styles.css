@@ -105,7 +105,11 @@ main section:nth-of-type(1) {
 
 main section:nth-of-type(1) div p {
   text-align: center;
-} /* This has to be here for Firefox, if it wasn't it's left justified yet Chrome has no problem centering it from attributes above. WHY. */
+} /* This has to be here for Firefox, if not it's left justified yet Chrome has no problem centering it from attributes above. WHY. */
+
+main section:nth-of-type(1) p {
+  margin: 0em 0em 0em 2em;
+}
 
 main section:nth-of-type(2) {
   display: flex;
@@ -115,7 +119,8 @@ main section:nth-of-type(2) {
 
 main section:nth-of-type(2) p:nth-of-type(1) {
   margin: 0em 1em 0em 0em;
-}
+  flex-basis: 360%;
+} /* Ok I don't know why but to match the sizing of the left most box across all images presented, this nonsense had to be done. */
 
 main section:nth-of-type(2) p:nth-of-type(2) {
   margin: 0em 1em 0em 0em;
@@ -135,10 +140,14 @@ footer {
   text-align: center;
 }
 
-footer p {
-  flex-basis: 45%;
-}
+footer p:nth-of-type(1) {
+  flex-basis: 53%;
+} /* And this nonsense. */
+
+footer p:nth-of-type(2) {
+  flex-basis: 47%;
+} /* Nonsense, part 3. */
 
 footer a {
-  flex-basis: 10%;
+  flex-basis: 5%;
 }
